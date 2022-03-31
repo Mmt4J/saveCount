@@ -14,7 +14,10 @@ btns.forEach(function(btn){
             count++;
         } else if(styles.contains('reset')){
             count = 0;
-        }
+            store.textContent = 0;
+            value.textContent = 0;
+        }		
+	//Assigning colors for the value
         if (count > 0){
             value.style.color = "green";
         }
@@ -24,15 +27,16 @@ btns.forEach(function(btn){
         if (count === 0){
             value.style.color = "#2f4f4f";
         }
-        value.textContent = count;
-    })
-});
-
-function save(){
+	value.textContent = count;
+		
+	if(styles.contains('save')){
 	let storage = store.textContent;
 	store.textContent = Number(storage) + count;
-}
+        value.textContent = 0;
+        count = 0;
+	}
 
-function set(){
-	store.textContent = 0;
-}
+       
+    })
+
+});
