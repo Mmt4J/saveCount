@@ -32,14 +32,11 @@ main {
 .container {
   text-align: center;
 }
-#value {
+#value, #store {
   font-size: 6rem;
   font-weight: bold;
 }
-#store {
-  font-size: 6rem;
-  font-weight: bold;
- }
+
 .btn {
   text-transform: uppercase;
   background: transparent;
